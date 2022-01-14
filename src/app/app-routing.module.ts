@@ -6,11 +6,11 @@ import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'book', component: BookComponent },
-  { path: 'book/add', component: AddBookComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
+  { path: 'home', component: HomeComponent, data: { 'id': 'id' } },
+  { path: 'book', component: BookComponent, data: { 'id': 'id' } },
+  { path: 'add-book', component: AddBookComponent, data: { 'id': 'id' } },
+  { path: '', redirectTo: 'home', pathMatch: 'full', data: { 'id': 'id' } },
+  { path: '**', component: PageNotFoundComponent, data: { 'id': 'id' } }
 ];
 
 @NgModule({
