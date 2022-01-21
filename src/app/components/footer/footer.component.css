@@ -1,0 +1,11 @@
+div {
+  display: flex;
+  padding-top: 1.5rem;
+  background-color: beige;
+  font-weight: bold;
+  font-size: small;
+}
+
+p {
+  margin-left: 5rem;
+}

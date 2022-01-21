@@ -1,9 +1,23 @@
+div {
+  background-color: aliceblue;
+  padding-bottom: 1.5rem;
+}
+
 table {
   width: 75%;
   margin: 0 auto;
   text-align: center;
+  background-color: lightgray;
 }
 
 th.mat-header-cell {
   text-align: center;
+  background-color: lightblue;
+}
+
+.search-box {
+  margin-bottom: 0.25rem;
+  margin-left: 13%;
+  margin-top: 0.25rem;
+  background-color: lightgray;
 }

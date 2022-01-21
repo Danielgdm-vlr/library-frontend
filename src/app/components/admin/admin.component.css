@@ -8,21 +8,11 @@
   padding-top: 1rem;
 }
 
-.card {
-  margin: 0 auto;
-  width: 40%;
+ul {
+  list-style: none;
+  justify-content: space-between;
 }
 
-h3 {
-  text-align: center;
-}
-
-input {
-  margin-bottom: 1rem;
-}
-
-button {
-  margin: 0 auto;
-  width: 50%;
+li {
   margin-bottom: 1rem;
 }

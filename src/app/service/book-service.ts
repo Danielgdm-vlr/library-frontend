@@ -19,4 +19,12 @@ export class BookService{
     getAll(): Observable<Book[]>{
         return this.httpClient.get<Book[]>(this.baseURL, this.httpOptions);
     }
+
+    post(book: Book): void{
+        this.httpClient.post<any>(this.baseURL, book, this.httpOptions).subscribe();
+    }
+
+    getByIdAndGenre(id: number, genre: string): Observable<Book>{
+        return this.httpClient.get<Book>(this.baseURL + `/id/genre/?id=${id}&genre=${genre}`, this.httpOptions);
+    }
 }

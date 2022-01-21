@@ -3,3 +3,8 @@
   height: 39rem;
   width: 100%;
 }
+
+button {
+  margin-top: 1rem;
+  margin-left: 5%;
+}

@@ -1,2 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body {
+  color: #131516;
+  background-color: gray;
+}
+
+app-footer {
+  bottom: 0;
+  width: 100%;
+}

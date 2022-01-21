@@ -1,1 +1,33 @@
-<p>add-book works!</p>
+<div class="container">
+    <div class="custom-container">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="container text-black">
+                    <h3>Add a new book</h3>
+                </div>
+                <div class="card-body" >
+                    <p class="card-text">
+                        Name of the book:
+                    </p>
+                    <input mat-input type="text" id="name" placeholder="Name">
+                    <p class="card-text">
+                        Genre of the book:
+                    </p>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select genre</mat-label>
+                        <mat-select [(ngModel)]="selectedGenre">
+                            <mat-option *ngFor="let genre of genres" [value]="genre">
+                                {{genre}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <p class="card-text">
+                        Author of the book:
+                    </p>
+                    <input mat-input type="text" id="author" placeholder="Author">
+                </div>
+                <button (click)="saveBook()">Add book to library</button>
+            </div>
+        </div>
+    </div>
+</div>

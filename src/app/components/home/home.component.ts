@@ -14,6 +14,7 @@ import { BookComponent } from '../book/book.component';
 @Injectable()
 export class HomeComponent implements OnInit {
 
+  tableBooks: MatTableDataSource<Book> = new MatTableDataSource();
   books: MatTableDataSource<Book> = new MatTableDataSource();
   displayedColumns: string[] = ['name', 'genre', 'author'];
 
@@ -29,16 +30,35 @@ export class HomeComponent implements OnInit {
 
   private fetch(){
 
-    this.bookService.getAll().subscribe(books => this.books = new MatTableDataSource(books))
+    this.bookService.getAll().subscribe(books => {
+      this.tableBooks = new MatTableDataSource(books);
+      this.books = new MatTableDataSource(books);
+    })
   }
 
   viewBook(book: Book){
 
-    console.log(book);
-    this.router.navigateByUrl ('book', { state: book });
-    // this.route.data.subscribe((data: any) => {
-    //   data.id = book.id;
-    //   console.log(data.id);
-    // })
+    // console.log(book);
+    // this.router.navigateByUrl ('book', { state: book });
+
+    this.router.navigate([`/book/${book.id}/${book.genre}`]);
+  }
+
+  searchBooks(event: any): void{
+
+    var tempTableBooks: MatTableDataSource<Book> = new MatTableDataSource();
+    
+    if(!(event.target.value == "")){
+      this.books.data.forEach(book => {
+        if(book.name.toLowerCase().includes(event.target.value.toLowerCase())){
+          tempTableBooks.data.push(book);
+        }
+      })
+
+      this.tableBooks = tempTableBooks;
+      return;
+    }
+
+    this.fetch();
   }
 }
