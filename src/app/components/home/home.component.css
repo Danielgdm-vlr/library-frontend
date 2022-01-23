@@ -1,5 +1,4 @@
 div {
-  background-color: aliceblue;
   padding-bottom: 1.5rem;
 }
 
@@ -7,17 +6,26 @@ table {
   width: 75%;
   margin: 0 auto;
   text-align: center;
-  background-color: lightgray;
+  background-color: #dddddd;
+  font-weight: bold;
 }
 
 th.mat-header-cell {
   text-align: center;
-  background-color: lightblue;
+  background-color: rgb(219, 175, 175);
+  font-weight: bold;
+  font-size: larger;
 }
 
 .search-box {
   margin-bottom: 0.25rem;
   margin-left: 13%;
-  margin-top: 0.25rem;
-  background-color: lightgray;
+  background-color: #eeeeee;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+h2 {
+  text-align: center;
+  padding: 1rem;
 }

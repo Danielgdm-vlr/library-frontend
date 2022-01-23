@@ -13,7 +13,7 @@
                     <p class="card-text">
                         Genre of the book:
                     </p>
-                    <mat-form-field appearance="fill">
+                    <mat-form-field appearance="outline">
                         <mat-label>Select genre</mat-label>
                         <mat-select [(ngModel)]="selectedGenre">
                             <mat-option *ngFor="let genre of genres" [value]="genre">

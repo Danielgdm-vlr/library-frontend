@@ -1,15 +1,14 @@
 .custom-container {
-  background-color: aliceblue;
-  height: 39rem;
   width: 100%;
-}
-
-.container-fluid {
-  padding-top: 1rem;
+  justify-content: center;
+  font-weight: bold;
+  color: #222222;
 }
 
 .card {
+  background-color: #dddddd;
   margin: 0 auto;
+  padding-top: 0.25rem;
   width: 40%;
 }
 
@@ -19,10 +18,25 @@ h3 {
 
 input {
   margin-bottom: 1rem;
+  background-color: #eeeeee;
+  font-weight: bold;
 }
 
 button {
   margin: 0 auto;
   width: 50%;
   margin-bottom: 1rem;
+  background-color: #cfcfcf;
+  font-weight: bold;
+  color: #222222;
+}
+
+mat-form-field,
+mat-select,
+mat-option {
+  font-weight: bold;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: #cfcfcf;
 }

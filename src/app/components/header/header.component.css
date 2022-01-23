@@ -1,8 +1,10 @@
 div {
   display: flex;
   padding-top: 1.5rem;
-  background-color: beige;
   font-weight: bold;
+  background-color: rgb(206, 150, 150);
+  margin-bottom: 1.5rem;
+  height: 4rem;
 }
 
 ul {
@@ -17,5 +19,10 @@ li {
 
 a {
   text-decoration: none;
-  color: #131516;
+  color: #222222;
+}
+
+a:hover {
+  font-weight: bold;
+  font-size: 1.05rem;
 }

@@ -1,5 +1,15 @@
 .custom-container {
-  background-color: aliceblue;
-  height: 39rem;
   width: 100%;
+  justify-content: center;
+}
+
+.card {
+  background-color: #dddddd;
+  margin: 0 auto;
+  padding-top: 0.25rem;
+}
+
+h1,
+h2 {
+  text-align: center;
 }

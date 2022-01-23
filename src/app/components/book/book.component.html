@@ -4,14 +4,15 @@
         <div class="container-fluid">
             <div class="card" style="width: 400px">
                 <div class="container text-black">
-                    <h1>{{book.name}}</h1>
+                    <h1>Book name:</h1>
+                    <h2>{{book.name}}</h2>
                 </div>
                 <div class="card-body" >
+                    <h4>Book details:</h4>
                     <p class="card-text">
-                        {{book.author}}
-                    </p>
-                    <p class="card-text">
-                        {{book.genre}}
+                        <b>Author name:</b> {{book.author}}
+                        <br>
+                        <b>Book genre:</b> {{book.genre}}
                     </p>
                 </div>
             </div>
