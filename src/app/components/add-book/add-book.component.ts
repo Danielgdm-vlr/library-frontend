@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Book } from 'src/app/model/book';
 import { BookService } from 'src/app/service/book-service';
@@ -16,7 +17,8 @@ export class AddBookComponent implements OnInit {
   author!: string;
 
   constructor(private bookService: BookService,
-    private router: Router) { }
+    private router: Router,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +28,18 @@ export class AddBookComponent implements OnInit {
     this.bookService.post(
       this.getValues()
     );
+
+    this.getSnackBarSavedBook();
+    setTimeout(() =>{
+      this.router.navigate(['home']);
+    }, 1500)
+  }
+
+  private getSnackBarSavedBook(){
+    
+    let config = new MatSnackBarConfig();
+    config.duration= 1250;
+    this.snackBar.open(`Book ${this.name} saved successfully`, undefined, config);
   }
 
   private getValues(): any{

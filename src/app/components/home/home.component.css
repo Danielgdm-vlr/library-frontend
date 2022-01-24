@@ -15,6 +15,7 @@ th.mat-header-cell {
   background-color: rgb(219, 175, 175);
   font-weight: bold;
   font-size: larger;
+  counter-reset: #222222;
 }
 
 .search-box {
